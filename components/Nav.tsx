@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "@/app/providers";
+import { Logo } from "@/components/Logo";
 
 const LINKS = [
   { href: "#playground", label: "Playground" },
@@ -33,9 +34,8 @@ export function Nav() {
       }`}
     >
       <div className="container-x flex h-16 items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-          <span className="inline-block h-6 w-6 rounded-md bg-gradient-to-br from-indigo-400 to-fuchsia-500" />
-          <span>uivibe<span className="text-white/40 [.theme-light_&]:text-ink-400">/</span>pro-toaster</span>
+        <a href="#top" aria-label="uivibe-pro-toaster home">
+          <Logo />
         </a>
         <nav className="hidden items-center gap-1 md:flex">
           {LINKS.map((l) => (

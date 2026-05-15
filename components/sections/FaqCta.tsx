@@ -2,41 +2,7 @@
 
 import { useState } from "react";
 import { toast } from "uivibe-pro-toaster";
-
-const FAQ = [
-  {
-    q: "How big is the bundle, really?",
-    a: "Under 5 kB gzipped for every output (ESM, CJS, and IIFE/browser-global). No CSS file to import — styles are injected on first call.",
-  },
-  {
-    q: "Do I need a <Toaster /> provider?",
-    a: "No. The library uses a singleton manager that auto-mounts on the first toast call. Works the same in Vanilla JS, React, Vue, and any other DOM environment.",
-  },
-  {
-    q: "Is it SSR-safe with Next.js App Router?",
-    a: "Yes. Every browser API access is guarded by typeof window !== 'undefined'. Call toast() from any client component or event handler.",
-  },
-  {
-    q: "Can I customize the look?",
-    a: "Override any of the ~15 CSS variables (--uvt-bg, --uvt-radius, --uvt-accent, …) anywhere in your stylesheet, or pass className / style per toast.",
-  },
-  {
-    q: "How does the queue work?",
-    a: "Each position has its own visible-set and FIFO queue. When maxVisible is reached, new toasts wait. As old toasts dismiss, the queue promotes the next entry.",
-  },
-  {
-    q: "Does swipe-to-dismiss work on mobile?",
-    a: "Yes — it uses Pointer Events, which unify mouse and touch input. Drag past 80 px to dismiss; release earlier to snap back.",
-  },
-  {
-    q: "Can I update a toast after it's shown?",
-    a: "Yes — toast.update(id, { type, message, duration }) hot-swaps the content. This is exactly how toast.promise transitions loading → success.",
-  },
-  {
-    q: "Is it tree-shakeable?",
-    a: "Yes. The package is marked sideEffects: false and ships ESM. Bundlers will only include the methods you actually call.",
-  },
-];
+import { FAQ } from "@/lib/faq";
 
 export function FaqCta() {
   const [open, setOpen] = useState<number | null>(0);
@@ -80,7 +46,7 @@ export function FaqCta() {
               Try a toast
             </button>
             <a href="https://www.npmjs.com/package/uivibe-pro-toaster" target="_blank" rel="noreferrer" className="pill-btn">View on npm</a>
-            <a href="https://github.com/uivibe/uivibe-pro-toaster" target="_blank" rel="noreferrer" className="pill-btn">Star on GitHub</a>
+            <a href="https://github.com/rashaduldev/uivibe-pro-toaster" target="_blank" rel="noreferrer" className="pill-btn">Star on GitHub</a>
           </div>
         </div>
       </div>

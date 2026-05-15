@@ -20,12 +20,14 @@ export function ReactUsage() {
         </div>
 
         <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.2fr_1fr]">
-          <Tabs
-            tabs={[
-              { label: "SaveButton.tsx", content: <CodeBlock code={SNIPPETS.react} lang="tsx" filename="app/components/SaveButton.tsx" /> },
-              { label: "layout.tsx", content: <CodeBlock code={SNIPPETS.nextLayout} lang="tsx" filename="app/layout.tsx" /> },
-            ]}
-          />
+          <div className="min-w-0">
+            <Tabs
+              tabs={[
+                { label: "SaveButton.tsx", content: <CodeBlock code={SNIPPETS.react} lang="tsx" filename="app/components/SaveButton.tsx" /> },
+                { label: "layout.tsx", content: <CodeBlock code={SNIPPETS.nextLayout} lang="tsx" filename="app/layout.tsx" /> },
+              ]}
+            />
+          </div>
           <div className="card">
             <h3 className="text-lg font-semibold">Try it inline</h3>
             <p className="mt-2 text-sm text-white/65 [.theme-light_&]:text-ink-600">

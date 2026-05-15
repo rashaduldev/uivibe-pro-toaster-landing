@@ -14,10 +14,56 @@ import { ThemingShowcase } from "@/components/sections/ThemingShowcase";
 import { PositionsGrid } from "@/components/sections/PositionsGrid";
 import { Accessibility } from "@/components/sections/Accessibility";
 import { FaqCta } from "@/components/sections/FaqCta";
+import { FAQ } from "@/lib/faq";
+import { siteConfig } from "@/lib/site";
+
+const softwareApplicationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: siteConfig.name,
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Web",
+  description: siteConfig.description,
+  url: siteConfig.url,
+  downloadUrl: siteConfig.npmUrl,
+  softwareVersion: "1.0.0",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: a,
+    },
+  })),
+};
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([websiteJsonLd, softwareApplicationJsonLd, faqJsonLd]),
+        }}
+      />
       <Hero />
       <Stats />
       <Playground />

@@ -27,8 +27,8 @@ export function CodeBlock({ code, lang = "ts", filename, className = "" }: Props
   return (
     <div className={`group relative overflow-hidden rounded-xl border border-white/10 bg-black/40 [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-ink-50 ${className}`}>
       {filename ? (
-        <div className="flex items-center justify-between border-b border-white/10 px-4 py-2 text-xs font-mono text-white/60 [.theme-light_&]:border-ink-200 [.theme-light_&]:text-ink-500">
-          <span>{filename}</span>
+        <div className="flex min-w-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-2 text-xs font-mono text-white/60 [.theme-light_&]:border-ink-200 [.theme-light_&]:text-ink-500">
+          <span className="min-w-0 truncate">{filename}</span>
           <span className="rounded bg-white/5 px-1.5 py-0.5 [.theme-light_&]:bg-ink-200/60">{lang}</span>
         </div>
       ) : null}
