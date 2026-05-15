@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>uivibe-pro-toaster — CDN demo</title>
+    <style>
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #312e81 100%);
+        color: #f8fafc;
+        min-height: 100vh;
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+      p  { margin: 0; opacity: .8; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        width: 100%;
+        max-width: 720px;
+      }
+      button {
+        font: inherit;
+        padding: 12px 14px;
+        background: rgba(255,255,255,.08);
+        color: #f8fafc;
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background .2s, transform .15s;
+      }
+      button:hover { background: rgba(255,255,255,.14); }
+      button:active { transform: translateY(1px); }
+    </style>
+  </head>
+  <body>
+    <h1>uivibe-pro-toaster</h1>
+    <p>Pure HTML &amp; JS demo — loaded from the local UMD/IIFE bundle.</p>
+
+    <div class="grid">
+      <button onclick="Toast.success('Listing saved!')">Success</button>
+      <button onclick="Toast.error('Something broke')">Error</button>
+      <button onclick="Toast.info('Heads up — new update available')">Info</button>
+      <button onclick="Toast.warning('Low on disk space')">Warning</button>
+      <button onclick="Toast.loading('Uploading…')">Loading</button>
+      <button onclick="Toast('Plain message', { duration: 3000 })">Default</button>
+      <button onclick="runPromiseDemo()">Promise</button>
+      <button onclick="Toast.dismiss()">Dismiss all</button>
+    </div>
+
+    <p>Position:</p>
+    <div class="grid" id="positions"></div>
+
+    <!-- Load the built browser-global bundle -->
+    <script src="../dist/index.global.js"></script>
+    <script>
+      Toast.configure({ position: "top-right", duration: 4000, theme: "auto" });
+
+      function runPromiseDemo() {
+        const fakeApi = new Promise((resolve, reject) => {
+          setTimeout(() => (Math.random() > 0.3 ? resolve({ id: 7 }) : reject(new Error("network"))), 1800);
+        });
+        Toast.promise(fakeApi, {
+          loading: "Saving listing…",
+          success: (data) => "Saved listing #" + data.id,
+          error: (err) => "Failed: " + err.message,
+        });
+      }
+
+      const positions = [
+        "top-left", "top-center", "top-right",
+        "middle-left", "middle-center", "middle-right",
+        "bottom-left", "bottom-center", "bottom-right",
+      ];
+      const grid = document.getElementById("positions");
+      positions.forEach((p) => {
+        const b = document.createElement("button");
+        b.textContent = p;
+        b.onclick = () => Toast.info("Hello from " + p, { position: p });
+        grid.appendChild(b);
+      });
+    </script>
+  </body>
+</html>

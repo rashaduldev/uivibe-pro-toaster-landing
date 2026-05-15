@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --uvt-accent: #6366f1;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background:
+    radial-gradient(at 20% -10%, rgba(99,102,241,.18), transparent 50%),
+    radial-gradient(at 80% 0%, rgba(168,85,247,.16), transparent 50%),
+    radial-gradient(at 50% 100%, rgba(56,189,248,.10), transparent 50%),
+    #0a0a14;
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+body.theme-light {
+  background:
+    radial-gradient(at 20% -10%, rgba(99,102,241,.12), transparent 50%),
+    radial-gradient(at 80% 0%, rgba(168,85,247,.10), transparent 50%),
+    #f8fafc;
+  color: #0f172a;
+}
+
+@layer components {
+  .section {
+    @apply relative w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 scroll-mt-20;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-6xl;
+  }
+  .h-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-widest text-white/70;
+  }
+  .theme-light .h-eyebrow {
+    @apply border-ink-200 bg-white text-ink-600;
+  }
+  .h-section-title {
+    @apply text-balance text-3xl md:text-5xl font-semibold tracking-tight mt-4;
+  }
+  .h-section-sub {
+    @apply text-balance text-base md:text-lg text-white/70 mt-4 max-w-2xl;
+  }
+  .theme-light .h-section-sub {
+    @apply text-ink-600;
+  }
+  .card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur p-6 transition hover:bg-white/[0.06];
+  }
+  .theme-light .card {
+    @apply border-ink-200 bg-white shadow-sm hover:shadow-md;
+  }
+  .pill-btn {
+    @apply inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10 active:translate-y-px;
+  }
+  .theme-light .pill-btn {
+    @apply border-ink-200 bg-white text-ink-900 hover:bg-ink-100;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:brightness-110 active:translate-y-px;
+  }
+  .code {
+    @apply font-mono text-[13px] leading-relaxed;
+  }
+  .grad-text {
+    background: linear-gradient(90deg, #818cf8, #c4b5fd, #f0abfc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
