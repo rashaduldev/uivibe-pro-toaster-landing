@@ -5,6 +5,7 @@ import { toast } from "uivibe-pro-toaster";
 import { CodeBlock } from "@/components/CodeBlock";
 import { SNIPPETS } from "@/lib/snippets";
 
+
 export function PromiseDemo() {
   const [running, setRunning] = useState(false);
 
