@@ -11,7 +11,8 @@
   "dependencies": {
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "uivibe-pro-toaster": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
