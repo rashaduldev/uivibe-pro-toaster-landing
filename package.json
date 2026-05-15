@@ -12,7 +12,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "uivibe-pro-toaster": "https://github.com/rashaduldev/uivibe-pro-toaster"
+    "uivibe-pro-toaster": "git+https://github.com/rashaduldev/uivibe-pro-toaster.git"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
