@@ -34,7 +34,7 @@ export function Hero() {
   return (
     <section id="top" className="section pt-32 md:pt-40">
       <div className="container-x relative isolate">
-        <div className="pointer-events-none absolute inset-x-0 -top-32 mx-auto h-72 w-[60%] rounded-full bg-gradient-to-r from-indigo-500/30 via-fuchsia-500/30 to-cyan-400/30 blur-3xl" />
+        <div className="pointer-events-none absolute inset-x-0 -top-32 mx-auto h-72 w-[60%] rounded-full bg-blue-500/20 blur-3xl" />
 
         <div className="flex flex-col items-center text-center">
           <span className="h-eyebrow animate-fade-in">

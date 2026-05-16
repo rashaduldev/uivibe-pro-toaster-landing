@@ -29,7 +29,7 @@ export function ThemingShowcase() {
           <h2 className="h-section-title">Override one CSS variable. Or all fifteen.</h2>
           <p className="h-section-sub">
             Every visual surface is wired to a CSS custom property. Drop them into
-            <code className="code text-indigo-300">{` :root`}</code> and they cascade everywhere.
+            <code className="code text-blue-300">{` :root`}</code> and they cascade everywhere.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export function ThemingShowcase() {
               <label className="block">
                 <span className="text-xs uppercase tracking-widest text-white/50 [.theme-light_&]:text-ink-500">Border radius</span>
                 <div className="mt-2 flex items-center gap-3">
-                  <input type="range" min={0} max={28} value={radius} onChange={(e) => setRadius(Number(e.target.value))} className="w-full accent-indigo-500" />
+                  <input type="range" min={0} max={28} value={radius} onChange={(e) => setRadius(Number(e.target.value))} className="w-full accent-blue-500" />
                   <code className="code text-white/80 [.theme-light_&]:text-ink-700">{radius}px</code>
                 </div>
               </label>

@@ -14,9 +14,8 @@ export function Logo({ compact = false, className = "" }: LogoProps) {
       >
         <defs>
           <linearGradient id="logo-shell" x1="6" y1="5" x2="34" y2="35" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#818CF8" />
-            <stop offset="0.52" stopColor="#C084FC" />
-            <stop offset="1" stopColor="#22D3EE" />
+            <stop stopColor="#7DA2FF" />
+            <stop offset="1" stopColor="#2F6BFF" />
           </linearGradient>
           <linearGradient id="logo-glow" x1="11" y1="11" x2="29" y2="29" gradientUnits="userSpaceOnUse">
             <stop stopColor="white" stopOpacity="0.96" />
@@ -42,4 +41,3 @@ export function Logo({ compact = false, className = "" }: LogoProps) {
     </span>
   );
 }
-

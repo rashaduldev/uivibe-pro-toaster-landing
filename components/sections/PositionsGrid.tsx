@@ -40,7 +40,7 @@ export function PositionsGrid() {
               <button
                 key={p}
                 onClick={() => toast.info(`Hello from ${LABEL[p]}`, { position: p })}
-                className="rounded-lg border border-white/10 bg-white/[0.03] text-xs text-white/70 transition hover:border-indigo-400 hover:bg-indigo-500/15 hover:text-white [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-ink-50 [.theme-light_&]:text-ink-600 [.theme-light_&]:hover:bg-indigo-100"
+                className="rounded-lg border border-white/10 bg-white/[0.03] text-xs text-white/70 transition hover:border-blue-400 hover:bg-blue-500/10 hover:text-white [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-ink-50 [.theme-light_&]:text-ink-600 [.theme-light_&]:hover:bg-blue-100"
               >
                 {LABEL[p]}
               </button>

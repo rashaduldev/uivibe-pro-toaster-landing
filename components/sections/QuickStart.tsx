@@ -16,8 +16,8 @@ export function QuickStart() {
             the first call and is fully SSR-safe — call it from any client code path.
           </p>
           <ul className="mt-6 space-y-3 text-sm text-white/80 [.theme-light_&]:text-ink-700">
-            <li>✓ No <code className="code text-indigo-300">&lt;Toaster /&gt;</code> mount</li>
-            <li>✓ No <code className="code text-indigo-300">import "./styles.css"</code></li>
+            <li>✓ No <code className="code text-blue-300">&lt;Toaster /&gt;</code> mount</li>
+            <li>✓ No <code className="code text-blue-300">import "./styles.css"</code></li>
             <li>✓ No SSR pre-render mismatch — DOM is only touched in the browser</li>
             <li>✓ Singleton container survives client-side navigation</li>
           </ul>

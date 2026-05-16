@@ -29,7 +29,7 @@ export function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition ${
         scrolled
-          ? "border-b border-white/10 bg-[#0a0a14]/70 backdrop-blur-md [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-white/80"
+          ? "border-b border-white/10 bg-[#0b0d12]/70 backdrop-blur-md [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-white/80"
           : ""
       }`}
     >
@@ -61,7 +61,7 @@ export function Nav() {
         </div>
       </div>
       {open && (
-        <div className="border-t border-white/10 bg-[#0a0a14]/95 backdrop-blur md:hidden [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-white/95">
+        <div className="border-t border-white/10 bg-[#0b0d12]/95 backdrop-blur md:hidden [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-white/95">
           <div className="container-x flex flex-col px-4 py-3 sm:px-6">
             {LINKS.map((l) => (
               <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-2 text-sm text-white/80 [.theme-light_&]:text-ink-700">

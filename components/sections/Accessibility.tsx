@@ -24,14 +24,14 @@ export function Accessibility() {
           <span className="h-eyebrow">15 · Accessibility &amp; support</span>
           <h2 className="h-section-title">Built for everyone, on every modern browser.</h2>
           <p className="h-section-sub">
-            ARIA-complete out of the box. <code className="code text-indigo-300">backdrop-filter</code> degrades to a solid background on older engines.
+            ARIA-complete out of the box. <code className="code text-blue-300">backdrop-filter</code> degrades to a solid background on older engines.
           </p>
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           {A11Y.map((a) => (
             <div key={a.title} className="card">
-              <div className="font-mono text-sm text-indigo-300 [.theme-light_&]:text-indigo-700">{a.title}</div>
+              <div className="font-mono text-sm text-blue-300 [.theme-light_&]:text-blue-700">{a.title}</div>
               <p className="mt-2 text-sm text-white/70 [.theme-light_&]:text-ink-600">{a.body}</p>
             </div>
           ))}

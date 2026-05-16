@@ -25,7 +25,7 @@ export function ConfigOptions() {
           <span className="h-eyebrow">12 · Options</span>
           <h2 className="h-section-title">Configure once, override per toast.</h2>
           <p className="h-section-sub">
-            <code className="code text-indigo-300">toast.configure()</code> sets defaults for every
+            <code className="code text-blue-300">toast.configure()</code> sets defaults for every
             subsequent call. Per-toast options always win.
           </p>
         </div>
@@ -46,7 +46,7 @@ export function ConfigOptions() {
               <tbody>
                 {OPTIONS.map((o, i) => (
                   <tr key={o.name} className={i % 2 === 0 ? "bg-transparent" : "bg-white/[0.02] [.theme-light_&]:bg-white"}>
-                    <td className="whitespace-nowrap px-4 py-3 font-mono text-indigo-300 [.theme-light_&]:text-indigo-700">{o.name}</td>
+                    <td className="whitespace-nowrap px-4 py-3 font-mono text-blue-300 [.theme-light_&]:text-blue-700">{o.name}</td>
                     <td className="whitespace-nowrap px-4 py-3 font-mono text-white/80 [.theme-light_&]:text-ink-700">{o.type}</td>
                     <td className="whitespace-nowrap px-4 py-3 font-mono text-white/65 [.theme-light_&]:text-ink-500">{o.def}</td>
                     <td className="px-4 py-3 text-white/70 [.theme-light_&]:text-ink-600">{o.notes}</td>

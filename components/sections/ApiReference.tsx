@@ -19,7 +19,7 @@ export function ApiReference() {
           <span className="h-eyebrow">11 · API reference</span>
           <h2 className="h-section-title">Ten methods. That&apos;s the whole API.</h2>
           <p className="h-section-sub">
-            Fully typed. Importable as named export <code className="code text-indigo-300">{`{ toast }`}</code> or default.
+            Fully typed. Importable as named export <code className="code text-blue-300">{`{ toast }`}</code> or default.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export function ApiReference() {
             <tbody>
               {METHODS.map((m, i) => (
                 <tr key={m.sig} className={i % 2 === 0 ? "bg-transparent" : "bg-white/[0.02] [.theme-light_&]:bg-white"}>
-                  <td className="whitespace-nowrap px-4 py-3 font-mono text-indigo-300 [.theme-light_&]:text-indigo-700">{m.sig}</td>
+                  <td className="whitespace-nowrap px-4 py-3 font-mono text-blue-300 [.theme-light_&]:text-blue-700">{m.sig}</td>
                   <td className="whitespace-nowrap px-4 py-3 font-mono text-white/80 [.theme-light_&]:text-ink-700">{m.returns}</td>
                   <td className="px-4 py-3 text-white/70 [.theme-light_&]:text-ink-600">{m.desc}</td>
                 </tr>

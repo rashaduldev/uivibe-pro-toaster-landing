@@ -13,7 +13,7 @@ export function ReactUsage() {
           <span className="h-eyebrow">08 · React &amp; Next.js</span>
           <h2 className="h-section-title">First-class React. SSR-safe by design.</h2>
           <p className="h-section-sub">
-            In the App Router, call <code className="code text-indigo-300">toast</code> from
+            In the App Router, call <code className="code text-blue-300">toast</code> from
             any client component or event handler. No provider needed — the singleton manager
             handles mount, queue, and unmount for you.
           </p>
@@ -31,7 +31,7 @@ export function ReactUsage() {
           <div className="card">
             <h3 className="text-lg font-semibold">Try it inline</h3>
             <p className="mt-2 text-sm text-white/65 [.theme-light_&]:text-ink-600">
-              This button is a normal React handler firing <code className="code text-indigo-300">toast.success</code>.
+              This button is a normal React handler firing <code className="code text-blue-300">toast.success</code>.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               <button onClick={() => toast.success("Saved from React!")} className="btn-primary">Save listing</button>

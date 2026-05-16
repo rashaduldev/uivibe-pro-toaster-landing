@@ -81,7 +81,7 @@ export function Playground() {
                     key={t}
                     onClick={() => setType(t)}
                     className={`pill-btn capitalize ${
-                      type === t ? "!border-indigo-400 !bg-indigo-500/20 text-white" : ""
+                      type === t ? "!border-blue-400 !bg-blue-500/15 text-white" : ""
                     }`}
                   >
                     {t}
@@ -99,7 +99,7 @@ export function Playground() {
                     onClick={() => setPosition(p)}
                     className={`rounded-md border border-white/10 px-2 py-2 text-xs transition ${
                       position === p
-                        ? "border-indigo-400 bg-indigo-500/20 text-white"
+                        ? "border-blue-400 bg-blue-500/15 text-white"
                         : "bg-white/[0.03] text-white/70 hover:bg-white/10 [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-white [.theme-light_&]:text-ink-700"
                     }`}
                   >
@@ -121,7 +121,7 @@ export function Playground() {
                 step={500}
                 value={duration}
                 onChange={(e) => setDuration(Number(e.target.value))}
-                className="w-full accent-indigo-500"
+                className="w-full accent-blue-500"
               />
             </div>
 
@@ -137,7 +137,7 @@ export function Playground() {
                     type="checkbox"
                     checked={value as boolean}
                     onChange={(e) => (set as (b: boolean) => void)(e.target.checked)}
-                    className="accent-indigo-500"
+                    className="accent-blue-500"
                   />
                   <span className="text-white/85 [.theme-light_&]:text-ink-700">{label as string}</span>
                 </label>

@@ -13,7 +13,7 @@ export default function Image() {
       <div
         style={{
           alignItems: "center",
-          background: "#09090f",
+          background: "#0b0d12",
           color: "#ffffff",
           display: "flex",
           height: "100%",
@@ -33,7 +33,7 @@ export default function Image() {
             width: "100%",
           }}
         >
-          <div style={{ color: "#a5b4fc", display: "flex", fontSize: 28 }}>
+          <div style={{ color: "#7da2ff", display: "flex", fontSize: 28 }}>
             uivibe-pro-toaster
           </div>
           <div style={{ display: "flex", fontSize: 64, fontWeight: 700, lineHeight: 1.08 }}>
@@ -48,4 +48,3 @@ export default function Image() {
     size,
   );
 }
-

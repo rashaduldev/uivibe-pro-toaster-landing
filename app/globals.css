@@ -5,7 +5,7 @@
 :root {
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  --uvt-accent: #6366f1;
+  --uvt-accent: #2f6bff;
 }
 
 html {
@@ -15,11 +15,9 @@ html {
 
 body {
   background:
-    radial-gradient(at 20% -10%, rgba(99,102,241,.18), transparent 50%),
-    radial-gradient(at 80% 0%, rgba(168,85,247,.16), transparent 50%),
-    radial-gradient(at 50% 100%, rgba(56,189,248,.10), transparent 50%),
-    #0a0a14;
-  color: #f8fafc;
+    radial-gradient(at 20% -10%, rgba(47,107,255,.14), transparent 42%),
+    #0b0d12;
+  color: #f7f8fb;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -27,10 +25,9 @@ body {
 
 body.theme-light {
   background:
-    radial-gradient(at 20% -10%, rgba(99,102,241,.12), transparent 50%),
-    radial-gradient(at 80% 0%, rgba(168,85,247,.10), transparent 50%),
-    #f8fafc;
-  color: #0f172a;
+    radial-gradient(at 20% -10%, rgba(47,107,255,.10), transparent 42%),
+    #f7f8fc;
+  color: #151922;
 }
 
 @layer components {
@@ -68,13 +65,15 @@ body.theme-light {
     @apply border-ink-200 bg-white text-ink-900 hover:bg-ink-100;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:brightness-110 active:translate-y-px;
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition hover:brightness-110 active:translate-y-px;
+    background: #2f6bff;
+    box-shadow: 0 16px 32px rgba(47, 107, 255, .24);
   }
   .code {
     @apply font-mono text-[13px] leading-relaxed;
   }
   .grad-text {
-    background: linear-gradient(90deg, #818cf8, #c4b5fd, #f0abfc);
+    background: linear-gradient(90deg, #7da2ff, #2f6bff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

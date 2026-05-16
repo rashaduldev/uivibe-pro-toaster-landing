@@ -35,7 +35,7 @@ export function PromiseDemo() {
           <span className="h-eyebrow">10 · Promise pipeline</span>
           <h2 className="h-section-title">Loading. Success. Or error. One call.</h2>
           <p className="h-section-sub">
-            Hand <code className="code text-indigo-300">toast.promise</code> any promise and three messages.
+            Hand <code className="code text-blue-300">toast.promise</code> any promise and three messages.
             It shows a spinner while pending, then swaps to a success / error toast based on the outcome.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">

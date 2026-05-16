@@ -35,10 +35,10 @@ export function FaqCta() {
           ))}
         </div>
 
-        <div className="mt-14 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-500/10 via-fuchsia-500/10 to-cyan-500/10 p-10 text-center [.theme-light_&]:border-ink-200 [.theme-light_&]:from-indigo-50 [.theme-light_&]:via-fuchsia-50 [.theme-light_&]:to-cyan-50">
+        <div className="mt-14 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-center [.theme-light_&]:border-ink-200 [.theme-light_&]:bg-white">
           <h3 className="text-2xl font-semibold md:text-3xl">Ready to ship better feedback?</h3>
           <p className="mx-auto mt-3 max-w-xl text-white/70 [.theme-light_&]:text-ink-600">
-            Install <code className="code text-indigo-300">uivibe-pro-toaster</code> and replace your existing
+            Install <code className="code text-blue-300">uivibe-pro-toaster</code> and replace your existing
             toast library in under five minutes.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
